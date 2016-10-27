@@ -99,6 +99,6 @@ ember try:reset
 
 FOO="5" ember try:one default --- ./fail-if-no-foo.sh
 
-ember try:one default --- FOO=5 ./fail-if-no-foo.sh
+DEBUG=ember-try* ember try:one default --- FOO=5 ./fail-if-no-foo.sh
 
 ember try:one default --- 'echo 1 && echo 2'
