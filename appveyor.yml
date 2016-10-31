@@ -4,11 +4,7 @@
 environment:
   MOCHA_REPORTER: "mocha-appveyor-reporter"
   matrix:
-    - nodejs_version: "4.2"
-
-branches:
-  except:
-    - canary
+    - nodejs_version: "6"
 
 # Install scripts. (runs after repo cloning)
 install:
@@ -22,6 +18,8 @@ install:
   - npm version
   - npm install
   - bower install
+  - npm link
+  - npm link ember-try
 
 cache:
   - '%APPDATA%\npm-cache'
